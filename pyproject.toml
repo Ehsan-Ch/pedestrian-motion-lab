@@ -1,0 +1,13 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+[project]
+name = "pedestrian-motion-lab"
+version = "1.0.0"
+description = "Causal pedestrian tracking and image-space motion forecasting on real driving sequences"
+requires-python = ">=3.11"
+dependencies = ["numpy>=1.26,<3", "opencv-python-headless>=4.10,<5"]
+[project.scripts]
+motion-lab = "motion_lab.cli:main"
+[tool.setuptools.packages.find]
+include = ["motion_lab*"]
