@@ -24,6 +24,10 @@ These are descriptive results on two correlated excerpts. They are **not officia
 
 ## Open the preview
 
+[**Open the public interactive demo**](https://ehsan-ch.github.io/pedestrian-motion-lab/) — no installation or login required. The replay is hosted on GitHub Pages and remains available when the development computer is off.
+
+To run the same preview locally:
+
 Python 3.11+:
 
 ```sh

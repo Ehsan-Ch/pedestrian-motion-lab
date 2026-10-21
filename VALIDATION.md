@@ -12,9 +12,11 @@ The 5-frame forecast sample has 131 eligible anchors and mean motion/stationary 
 
 `python -m unittest discover -s tests -v`: **41 passed, zero skipped**, Windows / Python 3.12 / OpenCV 4.13 / NumPy 2.3.5. The test suite covers detector decoding, confidence and class handling, model-hash rejection, matching/ignore precedence, optimal assignment against exhaustive enumeration, confirmation, gap coasting, expiration, ID ordering, deterministic reset, constant-velocity forecasts, covariance positivity, frozen snapshots, future-label scoring, recorded-metric reconstruction, HTTP serving and private/traversal-path rejection.
 
-The integration study uses the real model. Unit tests are deterministic and require neither model nor dataset downloads. Committed report metrics are reconstructed by tests. JavaScript syntax is checked with Node. GitHub Actions is configured for Python 3.11 and 3.12; its execution status must be verified separately from local tests.
+The integration study uses the real model. Unit tests are deterministic and require neither model nor dataset downloads. Committed report metrics are reconstructed by tests. JavaScript syntax is checked with Node. GitHub Actions completed successfully on Python 3.11 and 3.12 for release commit `f050c9fb6c4a91018c82773222ce0e324d43657d`: [verified test run](https://github.com/Ehsan-Ch/pedestrian-motion-lab/actions/runs/39567926906).
 
 ## Browser validation
+
+[The public GitHub Pages preview](https://ehsan-ch.github.io/pedestrian-motion-lab/) was opened in the browser after the [successful deployment](https://github.com/Ehsan-Ch/pedestrian-motion-lab/actions/runs/39567942512). The hosted report loaded its metrics, sequence images and track overlays, and recorded playback was exercised. It requires no local server or model download.
 
 The local report displays measured metrics and actual KITTI sequence images. Clip switching, recorded playback through frame 59 with automatic stop, 5/10-frame forecast selection, last-position tracker selection and ground-truth display were exercised in the browser. Both observed and coasting states are explicitly distinguished. Static replay does not perform new model inference.
 
